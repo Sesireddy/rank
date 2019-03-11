@@ -2,7 +2,7 @@
 
 select ename,sal,rank()over(order by sal desc) from emp;
 
-
+lets begin sw code
 select distinct sal from 
 (select ename,sal,dense_rank()over(order by sal desc,hiredate desc) from emp)as rank
 where rank>=5;
